@@ -26,8 +26,8 @@ int previousA2 = -1;
 elapsedMillis msec = 0;  //to measure time between events
 
 
-void setup(void) {
-
+void setup() {
+  Serial.begin(9600);
   Serial.println("Trying to read LIS3DH!");
   
   if (! lis.begin(0x18)) {   // change this to 0x19 for alternative i2c address
