@@ -26,7 +26,7 @@ void loop() {
 
     // only transmit MIDI messages if analog input changed
     if (n0 != previousA0) {
-      usbMIDI.sendNoteOn(map(n0, 0, 127, 40, 127), 99, channel);  // velovity fixed to 99
+      usbMIDI.sendNoteOn(map(n0, 0, 127, 40, 127), 99, channel);  // velocity fixed to 99
       previousA0 = n0;
     }
 
