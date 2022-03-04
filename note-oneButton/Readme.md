@@ -3,7 +3,7 @@
 1) Add a button in PULL-UP configuration to the circuit
 ![alt text](teensy-ldr-button.png)
 
-2) First try the code for the button: 
+2) First try the code for the button: https://github.com/ultranoise/teensyMIDItoolkit/blob/master/note-oneButton/teensy-one-button.ino
 
 3) Add this code to the previous of the LDR so that you have a Control Change for the LDR and a MIDI note triggered with the Button
 
