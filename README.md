@@ -10,4 +10,6 @@ The examples are organised from practising diverse techniques.
 
 1) To begin, grasp your teensy board, install Arduino if you do not have it already and its extension for Teensy called "Teensyduino". For that go to: https://www.pjrc.com/teensy/td_download.html
 
-2) 
+2) Learn how to create one MIDI Control Change with one Analog Sensor with this tutorial: https://github.com/ultranoise/teensyMIDItoolkit/tree/master/AnalogControlChange-oneInput
+
+3) Add one button to the previous project using the following code: 
