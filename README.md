@@ -6,10 +6,11 @@ You will find examples of arduino code written for teensy boards (especially tee
 
 The examples are organised from practising diverse techniques.
 
-# Practice 1: Installation and first MIDI instrument
+To begin, grasp your teensy board, install Arduino if you do not have it already and its extension for Teensy called "Teensyduino". For that go to: https://www.pjrc.com/teensy/td_download.html
 
-1) To begin, grasp your teensy board, install Arduino if you do not have it already and its extension for Teensy called "Teensyduino". For that go to: https://www.pjrc.com/teensy/td_download.html
+# Practice 1: First MIDI instrument: Control Change with one Analog Sensor
 
-2) Learn how to create one MIDI Control Change with one Analog Sensor with this tutorial: https://github.com/ultranoise/teensyMIDItoolkit/tree/master/AnalogControlChange-oneInput
+Learn how to create one MIDI Control Change with one Analog Sensor with this tutorial: https://github.com/ultranoise/teensyMIDItoolkit/tree/master/AnalogControlChange-oneInput
 
-3) Add one button to the previous project using the following code: 
+# Practice 2: Trigger a MIDI note with a button
+Add one button to the previous project using the following code: https://github.com/ultranoise/teensyMIDItoolkit/tree/master/note-oneButton
