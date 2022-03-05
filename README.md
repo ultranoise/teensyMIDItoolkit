@@ -20,7 +20,8 @@ Add one button to the previous project using the following code: https://github.
 Add one touch (capacitive) input to the previous project using the following code: https://github.com/ultranoise/teensyMIDItoolkit/tree/master/oneTouch-calibrated
 
 # To know more
-Explore the other functions available here: https://www.pjrc.com/teensy/td_midi.html
+Explore the whole repository of functions available: https://www.pjrc.com/teensy/td_midi.html
+Learn more about MIDI here: https://cnx.org/contents/csA1TDZU@4/MIDI-Messages
 
 # Connecting many buttons and knobs 
 (source: https://www.pjrc.com/teensy/td_midi.html)
