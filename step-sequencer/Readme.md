@@ -2,7 +2,7 @@
 
 In this practice you will experiment with the simplest possible step sequencer for MIDI (probably a bit jitterish...)
 
-1) Upload the following code: 
+1) Upload the following code: https://github.com/ultranoise/teensyMIDItoolkit/blob/master/step-sequencer/teensy-sequencer.ino
   It is a monophonic 16-steps sequencer without any control. It produces 10 notes per second.
   
 2) Test it with your favourite synth. 
@@ -12,3 +12,7 @@ In this practice you will experiment with the simplest possible step sequencer f
 4) Test it with your favourite synth
 
 5) Show it to the class
+
+6) Add another voice or voices....
+
+7) Show it to the class
