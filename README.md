@@ -51,3 +51,21 @@ One frequent questions is how to connect multiple buttons and sensors. Often MID
 A delay is required between 74HC4051 change and analogRead(). Any extra capacitance can greatly increase the required delay. This forum thread shows how to calculate the delay, and what problems to expect if the delay is not long enough.
 
 For newer Teensy boards with 3.3V signals, 74HCT4051 chips are best. Power the 74HCT4051 from 5V. If 74HC4051 (without the "T") are used, they should be powered by 3.3V when used with a Teensy that has 3.3V signals, or by 5V when used with a Teensy having 5V signals.
+
+# Building a simple MPE controller
+
+A common way to describe MPE actions is:
+
+"Strike" Key on intensity / Attack-Velocity
+
+"Press" Aftertouch / Channel Pressure
+
+"Slide" CC 74 (normally vertically)
+
+"Glide" Pitchbend (normally horizontally)
+
+"Lift" Key off intensity / Release-Velocity
+
+Sometimes this also will be referred to as the 5 dimensions of polyphonic expression.
+
+In addition to being able to express per-note pitch (Pitch Bend) and pressure (Channel Pressure), a third dimension of per-note control may be expressed using MIDI CC #74.
