@@ -17,7 +17,7 @@
 ```
 usbMIDI.sendPitchBend(value, channel); 
 ```
-taking into account that the pitch bend range is not 0-127 but 0-16383 (14 bits) so you will have to update your map() instruction. 
+taking into account that the pitch bend range is not 0-127 but 0-16383 (14 bits) so you will have to update your map() instruction. Take also into account that you are transmitting the Pitch Bend position, not the amount of pitch bend.
 
 7) Map it and test it with your favourite synth.
 
