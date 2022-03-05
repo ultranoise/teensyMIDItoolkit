@@ -52,7 +52,9 @@ A delay is required between 74HC4051 change and analogRead(). Any extra capacita
 
 For newer Teensy boards with 3.3V signals, 74HCT4051 chips are best. Power the 74HCT4051 from 5V. If 74HC4051 (without the "T") are used, they should be powered by 3.3V when used with a Teensy that has 3.3V signals, or by 5V when used with a Teensy having 5V signals.
 
-# Building a simple MPE controller
+# Building a simple MPE controller (in progress)
+
+MIDI MPE Specs: https://d30pueezughrda.cloudfront.net/campaigns/mpe/mpespec.pdf
 
 A common way to describe MPE actions is:
 
