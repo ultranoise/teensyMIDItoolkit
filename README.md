@@ -15,7 +15,7 @@ If you need a MIDI synth to test your code, I recommend Helm (open source & mult
 # Practice 1: Control Change with one Analog Sensor
 Learn how to create one MIDI Control Change with one Analog Sensor with this tutorial: https://github.com/ultranoise/teensyMIDItoolkit/tree/master/AnalogControlChange-oneInput
 
-# Practice 2: Trigger a MIDI notes and chords with a button
+# Practice 2: Trigger MIDI notes and chords with a button
 Add one button to the previous project using the following code: https://github.com/ultranoise/teensyMIDItoolkit/tree/master/note-oneButton
 
 # Practice 3: Read capacitive touch input and transmit it as CC, Pitch Bend and After Touch
