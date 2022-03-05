@@ -1,4 +1,4 @@
-# Add one button for triggering a MIDI note
+# Add one button for triggering a MIDI notes and chords
 
 1) Add a button in PULL-UP configuration to the circuit
 ![alt text](teensy-ldr-button.png)
