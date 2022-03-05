@@ -113,8 +113,8 @@ void loop() {
     //update current step
     current_step = current_step + 1;
     if(current_step == NUM_STEPS) current_step = 0;  //if it ends the sequence go to the beginning  
-  } else {  //time between notes
-    //you could do something here (update displays, reading sensors, etc)
+  } else if(currentMillis - previousMillis >= seq_time/2){
+      usbMIDI.sendNoteOff(pitches[current_step], 0, channel);
   }
 }
 
