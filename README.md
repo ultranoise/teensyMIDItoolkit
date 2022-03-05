@@ -14,5 +14,5 @@ Learn how to create one MIDI Control Change with one Analog Sensor with this tut
 # Practice 2: Trigger a MIDI note with a button
 Add one button to the previous project using the following code: https://github.com/ultranoise/teensyMIDItoolkit/tree/master/note-oneButton
 
-# Practice 3: Read capactive touch and transmit it as CC MIDI
+# Practice 3: Read capacitive touch input and transmit it as CC MIDI
 Add one touch (capacitive) input to the previous project using the following code: https://github.com/ultranoise/teensyMIDItoolkit/tree/master/oneTouch-calibrated
