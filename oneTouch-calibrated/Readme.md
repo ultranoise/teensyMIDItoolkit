@@ -6,8 +6,10 @@
 
 2) Use the code from this example alone: https://github.com/ultranoise/teensyMIDItoolkit/blob/master/oneTouch-calibrated/teenys-onetouch-calibrated.ino
 
-3) Integrate it in the previous code (LDR + button) so that now you have it all using two CC values and a chord trigger. 
+3)  Map it with your favourite synth.
 
-4) Map it with your favourite synth.
+4) Integrate it to the previous code (LDR + button) so that now you have it all using two CC values and a chord trigger. 
 
-5) Show it to the class
+5) Map it all with your favourite synth.
+
+6) Show it to the class
