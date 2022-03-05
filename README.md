@@ -6,7 +6,7 @@ You will find examples of arduino code written for teensy boards (especially tee
 
 The examples are organised for practising diverse techniques: buttons to notes, analog sensors to CC, pitch bend and after touch, sequencing... However, this repository contains many more examples than the ones explained at the particular practices specified below (e.g. accel sensors, multiple in/outs, etc). Explore them at your own risk.
 
-To begin with these examples, grasp your teensy board (preferably a teensy LC), install "Teensyduino". For that go to: https://www.pjrc.com/teensy/td_download.html
+To begin with these examples, grasp your teensy board (preferably a teensy LC) and install "Teensyduino". For that go to: https://www.pjrc.com/teensy/td_download.html
 
 In Teensyduino, do not forget to select MIDI from the "Tools > USB Type" menu
 
