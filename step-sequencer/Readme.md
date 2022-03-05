@@ -2,8 +2,32 @@
 
 In this practice you will experiment with the simplest possible step sequencer for MIDI (probably a bit jitterish...)
 
-1) Upload the following code: https://github.com/ultranoise/teensyMIDItoolkit/blob/master/step-sequencer/teensy-sequencer.ino
-  It is a monophonic 16-steps sequencer without any control. It produces 10 notes per second.
+1) Upload the following code. It is a monophonic 16-steps sequencer without any control.
+```
+int NUM_STEPS = 16;
+int channel = 1;
+
+int pitches[NUM_STEPS]={60, 62, 63, 65, 67, 68, 70, 72, 73, 72, 70, 68, 67, 65, 63, 62};
+int velocity = 100;
+
+int delay_time = 100; 
+
+void setup() {
+
+}
+
+void loop() {
+
+  for(int i = 0; i<NUM_STEPS; i++) {
+    usbMIDI.sendNoteOn(pitches[i], velocity, channel);
+    delay(delay_time/2);
+    usbMIDI.sendNoteOff(pitch, 0, channel);
+    delay(delay_time/2);
+  }
+
+}
+```
+
   
 2) Test it with your favourite synth. 
   
