@@ -4,13 +4,13 @@ This repository is created towards helping students to learn the art of USB MIDI
 
 You will find examples of arduino code written for teensy boards (especially teensy LC) making it easy to convert your board into a professional MIDI interface using capacitive touch, analog and digital inputs, accelerometers (LIS3DH with I2C), etc.
 
-The examples are organised from practising diverse techniques.
+The examples are organised from practising diverse techniques: buttons to notes, analog sensors to CC, pitch bend and after touch, sequencing...
 
-To begin, grasp your teensy board, install Arduino if you do not have it already and its extension for Teensy called "Teensyduino". For that go to: https://www.pjrc.com/teensy/td_download.html
+To begin with these examples, grasp your teensy board (preferably a teensy LC), install Arduino if you do not have it already and its extension for Teensy called "Teensyduino". For that go to: https://www.pjrc.com/teensy/td_download.html
 
-You must select MIDI from the "Tools > USB Type" menu
+In Teensyduino, do not forget to select MIDI from the "Tools > USB Type" menu
 
-If you need a MIDI synth, I recommend Helm (open source & multi-platform): https://tytel.org/helm/
+If you need a MIDI synth to test your code, I recommend Helm (open source & multi-platform): https://tytel.org/helm/
 
 # Practice 1: Control Change with one Analog Sensor
 Learn how to create one MIDI Control Change with one Analog Sensor with this tutorial: https://github.com/ultranoise/teensyMIDItoolkit/tree/master/AnalogControlChange-oneInput
