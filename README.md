@@ -10,6 +10,8 @@ To begin, grasp your teensy board, install Arduino if you do not have it already
 
 You must select MIDI from the "Tools > USB Type" menu
 
+If you need a MIDI synth, I recommend Helm (open source & multi-platform): https://tytel.org/helm/
+
 # Practice 1: Control Change with one Analog Sensor
 Learn how to create one MIDI Control Change with one Analog Sensor with this tutorial: https://github.com/ultranoise/teensyMIDItoolkit/tree/master/AnalogControlChange-oneInput
 
