@@ -9,8 +9,10 @@ The examples are organised from practising diverse techniques.
 To begin, grasp your teensy board, install Arduino if you do not have it already and its extension for Teensy called "Teensyduino". For that go to: https://www.pjrc.com/teensy/td_download.html
 
 # Practice 1: First MIDI instrument: Control Change with one Analog Sensor
-
 Learn how to create one MIDI Control Change with one Analog Sensor with this tutorial: https://github.com/ultranoise/teensyMIDItoolkit/tree/master/AnalogControlChange-oneInput
 
 # Practice 2: Trigger a MIDI note with a button
 Add one button to the previous project using the following code: https://github.com/ultranoise/teensyMIDItoolkit/tree/master/note-oneButton
+
+# Practice 3: Read capactive touch and transmit it as CC MIDI
+Add one touch (capacitive) input to the previous project using the following code: https://github.com/ultranoise/teensyMIDItoolkit/tree/master/oneTouch-calibrated
