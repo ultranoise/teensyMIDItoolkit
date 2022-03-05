@@ -20,7 +20,8 @@ Add one touch (capacitive) input to the previous project using the following cod
 # To know more
 Explore the other functions available here: https://www.pjrc.com/teensy/td_midi.html
 
-# Connecting many buttons and knobs (source https://www.pjrc.com/teensy/td_midi.html)
+# Connecting many buttons and knobs 
+(source: https://www.pjrc.com/teensy/td_midi.html)
 One frequent questions is how to connect multiple buttons and sensors. Often MIDI controllers need more pushbuttons and knobs or sliders than can be connected directly. The inexpensive 74HC4051 or 74HCT4051 chip can be used to connect 8 inputs to one pin. It works for analog or digital signals. Three digital pins are needed to control the 74HC4051, but those same 3 pins can control many chips.  
 
 ![alt text](ioexpand.png)
