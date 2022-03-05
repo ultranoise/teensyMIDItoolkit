@@ -28,6 +28,7 @@ One frequent questions is how to connect multiple buttons and sensors. Often MID
 
  To use these 74HC4051 chips, first select the desired channel using the 3 control pins. Then wait a brief time for the signals to propagate through the chips. 50 µs is plenty. Then you can read the pins. This process must be repeated 8 times to read all the signals.
 
+```
   // select 74HC4051 channel 5 (of 0 to 7)
   digitalWrite(1, HIGH);
   digitalWrite(2, LOW);
@@ -41,6 +42,7 @@ One frequent questions is how to connect multiple buttons and sensors. Often MID
   buttonPin10channel5.update();
   knobPin19channel5 = analogRead(19);
   knobPin20channel5 = analogRead(20);
+```
 
 A delay is required between 74HC4051 change and analogRead(). Any extra capacitance can greatly increase the required delay. This forum thread shows how to calculate the delay, and what problems to expect if the delay is not long enough.
 
