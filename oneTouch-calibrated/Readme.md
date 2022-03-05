@@ -1,6 +1,6 @@
 # Read capacitive input, calibrate it and transmit it as MIDI CC
 
-1) In this example we will read on capacitive (touch) pin of the Teensy LC. Add a jumper cable (in the püicture below it is blue) to the pin 1. You can also physically connect a electrolytic object to the cable (fruits, wood, some plastics, etc)
+1) In this example we will read one capacitive (touch) pin of the Teensy LC. Add a jumper cable (in the püicture below it is blue) to the pin 1. You can also physically connect a electrolytic object to the cable (fruits, wood, some plastics, etc)
 
 ![alt text](teensy-onetouch-calibrated.png)
 
