@@ -16,8 +16,11 @@ Learn how to create one MIDI Control Change with one Analog Sensor with this tut
 # Practice 2: Trigger a MIDI notes and chords with a button
 Add one button to the previous project using the following code: https://github.com/ultranoise/teensyMIDItoolkit/tree/master/note-oneButton
 
-# Practice 3: Read capacitive touch input and transmit it as CC and Pitch Bend
+# Practice 3: Read capacitive touch input and transmit it as CC, Pitch Bend and After Touch
 Add one touch (capacitive) input to the previous project using the following code: https://github.com/ultranoise/teensyMIDItoolkit/tree/master/oneTouch-calibrated
+
+# Practice 4: Create a MIDI Sequencer:
+Program a 8-step sequencer with teensy
 
 # To know more
 Explore the whole repository of functions available: https://www.pjrc.com/teensy/td_midi.html
