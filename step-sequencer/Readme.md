@@ -47,8 +47,6 @@ int current_step = 0;
 // The value will quickly become too large for an int to store
 unsigned long previousMillis = 0;        // will store last time LED was updated
 
-// constants won't change:
-const long interval = 1000;           // interval at which to blink (milliseconds)
 
 void setup() {  //nothing to do here by the moment
 
