@@ -4,20 +4,22 @@ In this practice you will experiment with the simplest possible step sequencer f
 
 1) Upload the following code. It is a monophonic 16-steps sequencer without any control.
 ```
+
+int channel = 1;  //MIDI channels
+
 int NUM_STEPS = 16;
-int channel = 1;
+int pitches[NUM_STEPS]={60, 62, 63, 65, 67, 68, 70, 72, 73, 72, 70, 68, 67, 65, 63, 62};  //init pitches for each step
+int velocity = 100;   //same velocity to all them
 
-int pitches[NUM_STEPS]={60, 62, 63, 65, 67, 68, 70, 72, 73, 72, 70, 68, 67, 65, 63, 62};
-int velocity = 100;
+int delay_time = 100;  //the sequencer step rhythm
 
-int delay_time = 100; 
-
-void setup() {
+void setup() {  //nothing to do here by the moment
 
 }
 
 void loop() {
 
+  //loop all the steps at the rhythm, get the pitches, and play them
   for(int i = 0; i<NUM_STEPS; i++) {
     usbMIDI.sendNoteOn(pitches[i], velocity, channel);
     delay(delay_time/2);
