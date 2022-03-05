@@ -20,7 +20,7 @@ Add one button to the previous project using the following code: https://github.
 Add one touch (capacitive) input to the previous project using the following code: https://github.com/ultranoise/teensyMIDItoolkit/tree/master/oneTouch-calibrated
 
 # Practice 4: Create a MIDI Sequencer:
-Program a 8-step sequencer with teensy
+Program a 16-step sequencer with teensy: https://github.com/ultranoise/teensyMIDItoolkit/tree/master/step-sequencer
 
 # To know more
 Explore the whole repository of functions available: https://www.pjrc.com/teensy/td_midi.html
