@@ -1,6 +1,6 @@
 # teensyMIDItoolkit
 
-This repository has been created for helping students of the Tangible Music Lab (Linz) to learn the art of USB MIDI.  
+This repository has been created for helping students to learn the art of USB MIDI.  
 
 You will find examples of arduino code written for teensy boards (especially teensy LC) making it easy to convert your board into a professional MIDI interface using capacitive touch, analog and digital inputs, accelerometers (LIS3DH with I2C), etc.
 
