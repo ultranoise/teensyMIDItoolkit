@@ -9,9 +9,11 @@
 3) Map it with your favourite synth.
 
 4) Now modify the code for transmiting Pitch Bend instead of CC. For that you will have to use the instruction:
-``` 
-usbMIDI.sendPitchBend(911, channel, cable); 
+
 ´´´
+usbMIDI.sendPitchBend(value, channel); 
+``` 
+
 4) Integrate it to the previous code (LDR + button) so that now you have it all using two CC values and a chord trigger. 
 
 5) Map it all with your favourite synth.
