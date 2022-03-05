@@ -10,7 +10,7 @@ To begin, grasp your teensy board, install Arduino if you do not have it already
 
 You must select MIDI from the "Tools > USB Type" menu
 
-# Practice 1: First MIDI instrument: Control Change with one Analog Sensor
+# Practice 1: Control Change with one Analog Sensor
 Learn how to create one MIDI Control Change with one Analog Sensor with this tutorial: https://github.com/ultranoise/teensyMIDItoolkit/tree/master/AnalogControlChange-oneInput
 
 # Practice 2: Trigger a MIDI notes and chords with a button
