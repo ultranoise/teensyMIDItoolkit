@@ -1,6 +1,6 @@
 # Create a basic step sequencer
 
-In this practice you will experiment with the simplest possible step sequencer for MIDI (probably a bit jitterish...)
+In this practice you will experiment with the simplest possible MIDI step sequencer.
 
 1) Upload the following code. It is a monophonic 16-steps sequencer without any control. Compare three options:
 
