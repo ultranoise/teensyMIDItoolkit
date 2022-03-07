@@ -64,9 +64,11 @@ void loop() {
     // save the last time you sent a note
     previousMillis = currentMillis;
 
-    if(!playing){
-      //play note 
-      playing = true;
+    //as the loop() is not blocked we have to add a semaphore or we will constantly 
+    //produce MIDI notes without control (probably exhausting your MIDI synth!).
+    //With the following conditional we produce only one note when is needed.
+    if(!playing){   
+      playing = true;  //disable entering here until the adequate moment
       usbMIDI.sendNoteOn(pitches[current_step], velocity, channel);
       //Serial.print("play ");
       //Serial.println(current_step);
@@ -77,15 +79,17 @@ void loop() {
     if(current_step == NUM_STEPS) current_step = 0;  //if it ends the sequence go to the beginning
       
   } else if(currentMillis - previousMillis >= seq_time/2){
+      
+      //A complementary conditional here: we only transmit note Off when necessary (and not constantly!)
       if(playing) {
-        playing = false;
+        playing = false;  //disable entering here until the next adequate moment
 
         //Serial.print("stop ");
-        if(current_step == 0) {
-          usbMIDI.sendNoteOff(pitches[NUM_STEPS-1], 0, channel);
+        if(current_step == 0) {  //at the end of the sequence (counter already values 0) we have to take care of the index
+          usbMIDI.sendNoteOff(pitches[NUM_STEPS-1], 0, channel);  //send note Off to the previous note
           //Serial.println(NUM_STEPS-1);
-        } else {
-          usbMIDI.sendNoteOff(pitches[current_step-1], 0, channel);
+        } else { //in case the counter is not at the end
+          usbMIDI.sendNoteOff(pitches[current_step-1], 0, channel);  //send note Off to the previous note
           //Serial.println(current_step-1);
         }
              
