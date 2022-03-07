@@ -81,11 +81,12 @@ Option 3: measure the ellapsed time without blocking loop() and releasing the MI
 int channel = 1;  //MIDI channels
 
 int NUM_STEPS = 16;
-int pitches[NUM_STEPS]={60, 62, 63, 65, 67, 68, 70, 72, 73, 72, 70, 68, 67, 65, 63, 62};  //init pitches for each step
+int pitches[16]={60, 62, 63, 65, 67, 68, 70, 72, 73, 72, 70, 68, 67, 65, 63, 62};  //init pitches for each step
 int velocity = 100;   //same velocity to all them
 
-int seq_time = 100;  //the sequencer step rhythm
+int seq_time = 200;  //the sequencer step rhythm
 int current_step = 0;
+bool playing = false;
 
 // Generally, you should use "unsigned long" for variables that hold time
 // The value will quickly become too large for an int to store
@@ -106,15 +107,34 @@ void loop() {
   if (currentMillis - previousMillis >= seq_time) {  //time to play the note
     // save the last time you sent a note
     previousMillis = currentMillis;
-    
-    //play note 
-    usbMIDI.sendNoteOn(pitches[current_step], velocity, channel);
-    
+
+    if(!playing){
+      //play note 
+      playing = true;
+      usbMIDI.sendNoteOn(pitches[current_step], velocity, channel);
+      //Serial.print("play ");
+      //Serial.println(current_step);
+     }
+     
     //update current step
     current_step = current_step + 1;
-    if(current_step == NUM_STEPS) current_step = 0;  //if it ends the sequence go to the beginning  
+    if(current_step == NUM_STEPS) current_step = 0;  //if it ends the sequence go to the beginning
+      
   } else if(currentMillis - previousMillis >= seq_time/2){
-      usbMIDI.sendNoteOff(pitches[current_step], 0, channel);
+      if(playing) {
+        playing = false;
+
+        //Serial.print("stop ");
+        if(current_step == 0) {
+          usbMIDI.sendNoteOff(pitches[NUM_STEPS-1], 0, channel);
+          //Serial.println(NUM_STEPS-1);
+        } else {
+          usbMIDI.sendNoteOff(pitches[current_step-1], 0, channel);
+          //Serial.println(current_step-1);
+        }
+             
+      }
+      
   }
 }
 
