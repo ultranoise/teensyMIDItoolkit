@@ -12,16 +12,16 @@ In Teensyduino, do not forget to select MIDI from the "Tools > USB Type" menu
 
 If you need a MIDI synth to test your code, I recommend Helm (open source & multi-platform): https://tytel.org/helm/
 
-# Practice 1: Control Change with one Analog Sensor
+# Exercise 1: Control Change with one Analog Sensor
 Learn how to create one MIDI Control Change with one Analog Sensor with this tutorial: https://github.com/ultranoise/teensyMIDItoolkit/tree/master/AnalogControlChange-oneInput
 
-# Practice 2: Trigger MIDI notes and chords with a button
+# Exercise 2: Trigger MIDI notes and chords with a button
 Add one button to the previous project using the following code: https://github.com/ultranoise/teensyMIDItoolkit/tree/master/note-oneButton
 
-# Practice 3: Read capacitive touch input and transmit it as CC, Pitch Bend and After Touch
+# Exercise 3: Read capacitive touch input and transmit it as CC, Pitch Bend and After Touch
 Add one touch (capacitive) input to the previous project using the following code: https://github.com/ultranoise/teensyMIDItoolkit/tree/master/oneTouch-calibrated
 
-# Practice 4: Create a MIDI Sequencer:
+# Exercise 4: Create a MIDI Sequencer:
 Program a 16-step sequencer with teensy: https://github.com/ultranoise/teensyMIDItoolkit/tree/master/step-sequencer
 
 # To know more
