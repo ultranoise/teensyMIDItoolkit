@@ -100,6 +100,97 @@ void loop() {
 
 ```
 
+```
+int channel = 1;  //MIDI channels
+
+int NUM_STEPS = 16;    //number of steps in our sequence
+int pitches[16]={60, 62, 63, 65, 67, 68, 70, 72, 73, 72, 70, 68, 67, 65, 63, 62};  //init pitches for each step
+int velocity = 100;   //by the moment, same velocity for all notes
+
+int seq_time = 200;    //the sequencer step rhythm
+int current_step = 0;  //the step we are playing
+bool playing = false;  //boolean to know if we have played a note
+
+int buttonStatus;
+bool SequencerIsPlaying; 
+
+// Generally, you should use "unsigned long" for variables that hold time
+// The value will quickly become too large for an int to store
+unsigned long previousMillis = 0;        
+
+void setup() {  //nothing to do here by the moment
+    SequencerIsPlaying = false;
+}
+
+void loop() {
+
+  // check to see if it's time to send the note; that is, if the difference
+  // between the current time and last time you sent a note is bigger than
+  // the interval at which you want to play the sequence.
+  unsigned long currentMillis = millis();
+
+  button0.update();
+
+  if (button0.fallingEdge()) {
+    buttonStatus = 1;  //I have pushed the button
+
+    //if seq is off enable it
+    if(SequencerIsPlaying == false) {
+        SequencerIsPlaying = true;
+    }
+    else  {//if seq is on enable off
+        SequencerIsPlaying = false;
+    } 
+ 
+ }
+
+  if (button0.risingEdge()) {
+    buttonStatus = 0;  //I have released the button
+  }
+
+
+  if (currentMillis - previousMillis >= seq_time) {  //time to play the note
+    // save the last time you produced a note
+    previousMillis = currentMillis;
+
+    if(SequencerIsPlaying){
+
+          if(!playing){   
+           playing = true;  //disable entering here until the adequate moment
+           usbMIDI.sendNoteOn(pitches[current_step], velocity, channel);
+          //Serial.print("play ");  //uncomment to debug
+          //Serial.println(current_step);
+        }
+     
+        //update current step
+        current_step = current_step + 1;
+    
+        if(current_step == NUM_STEPS) current_step = 0;  //if it ends the sequence go to the beginning
+      
+    }
+
+    
+      
+  } else if(currentMillis - previousMillis >= seq_time/2){
+    
+        //A complementary conditional here: we only transmit note Off when necessary (and not constantly!)
+        if(playing) {
+          playing = false;  //disable entering here until the next adequate moment
+
+          //Serial.print("stop ");
+          if(current_step == 0) {  //at the end of the sequence (counter already values 0) we have to take care of the index
+            usbMIDI.sendNoteOff(pitches[NUM_STEPS-1], 0, channel);  //send note Off to the previous note
+          //Serial.println(NUM_STEPS-1);   //uncomment to debug
+        } else { //in case the counter is not at the end
+          usbMIDI.sendNoteOff(pitches[current_step-1], 0, channel);  //send note Off to the previous note
+          //Serial.println(current_step-1); //uncomment to debug
+        }
+             
+      }
+       
+  }
+}
+
 2) Test it with your favourite synth. 
   
 3) Add controls to this monophonic sequencer with the circuit of the previous practices (LDR, button, touch) for controlling speed, play/stop, frequencies, etc. 
@@ -111,3 +202,4 @@ void loop() {
 6) Add another voice or voices....
 
 7) Show it to the class
+```
