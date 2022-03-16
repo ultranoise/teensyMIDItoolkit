@@ -103,6 +103,18 @@ void loop() {
 Third case with button controlling on/off
 
 ```
+
+#include <Bounce.h>
+
+// the MIDI channel number to send messages
+const int channel = 1;
+
+// Create Bounce objects for each button.  The Bounce object
+// automatically deals with contact chatter or "bounce", and
+// it makes detecting changes very simple.
+Bounce button0 = Bounce(0, 5);
+
+
 int channel = 1;  //MIDI channels
 
 int NUM_STEPS = 16;    //number of steps in our sequence
@@ -121,6 +133,7 @@ bool SequencerIsPlaying;
 unsigned long previousMillis = 0;        
 
 void setup() {  //nothing to do here by the moment
+    pinMode(0, INPUT_PULLUP);
     SequencerIsPlaying = false;
 }
 
