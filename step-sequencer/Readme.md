@@ -100,6 +100,8 @@ void loop() {
 
 ```
 
+Third case with button controlling on/off
+
 ```
 int channel = 1;  //MIDI channels
 
